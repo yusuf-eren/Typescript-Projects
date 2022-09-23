@@ -39,3 +39,25 @@ console.log(coordinates); // { x: 10, y: 20 }
 // '4' >>> number
 // '{ "value": 5 }' >>> { value: number }
 // '{ "name": "alex" }' >>> { name: string }
+
+// 2) When we declare a variable on one line
+// and initializate it later
+let words = ["red", "green", "blue"];
+let foundWord: boolean;
+
+for (let i: number = 0; i < words.length; i++) {
+  if (words[i] === "green") {
+    foundWord = true;
+  }
+}
+
+// 3) Variable whose type cannot be inferred correctly
+let numbers = [-10, -1, 12, -5];
+let numberAboveZero: boolean | number = false; // bool or number
+
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] > 0) {
+    numberAboveZero = numbers[i];
+  }
+}
+console.log(numberAboveZero);
