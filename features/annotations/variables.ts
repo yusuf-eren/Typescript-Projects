@@ -33,8 +33,8 @@ const logNumber: (i: number) => void = (i: number) => {
 // 1) Function that returns the 'any' type
 
 const json = '{"x":10, "y": 20}';
-const coordinates = JSON.parse(json);
-console.log(coordinates);
+const coordinates: { x: number; y: number } = JSON.parse(json);
+console.log(coordinates); // { x: 10, y: 20 }
 // 'false' >>> boolean
 // '4' >>> number
 // '{ "value": 5 }' >>> { value: number }
