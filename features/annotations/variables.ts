@@ -35,3 +35,7 @@ const logNumber: (i: number) => void = (i: number) => {
 const json = '{"x":10, "y": 20}';
 const coordinates = JSON.parse(json);
 console.log(coordinates);
+// 'false' >>> boolean
+// '4' >>> number
+// '{ "value": 5 }' >>> { value: number }
+// '{ "name": "alex" }' >>> { name: string }
