@@ -12,4 +12,7 @@ const profile = {
 
 // Advanced Destructuring Types
 const { age }: { age: number } = profile;
-console.log(profile);
+const {
+  coords: { lat, lng },
+}: { coords: { lat: number; lng: number } } = profile;
+console.log(lat);
