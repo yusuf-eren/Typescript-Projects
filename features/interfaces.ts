@@ -28,3 +28,4 @@ const printVehicle = (item: Reportable): void => {
 };
 
 printVehicle(oldCivic);
+console.log(drink.summary());
