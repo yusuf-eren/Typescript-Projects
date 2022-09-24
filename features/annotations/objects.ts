@@ -9,3 +9,7 @@ const profile = {
     this.age = age;
   },
 };
+
+// Advanced Destructuring Types
+const { age }: { age: number } = profile;
+console.log(profile);
