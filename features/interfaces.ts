@@ -2,6 +2,7 @@ interface Reportable {
   summary(): string;
 }
 
+// Must satisfy the 'Reportable'  interface
 const oldCivic = {
   name: "civic",
   year: new Date(),
@@ -11,6 +12,7 @@ const oldCivic = {
   },
 };
 
+// Must satisfy the 'Reportable'  interface
 const drink = {
   color: "brown",
   carbonated: true,
