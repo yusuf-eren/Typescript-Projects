@@ -1,7 +1,4 @@
 interface Reportable {
-  // name: string;
-  // year: Date;
-  // broken: boolean;
   summary(): string;
 }
 
@@ -23,9 +20,9 @@ const drink = {
   },
 };
 
-const printVehicle = (item: Reportable): void => {
+const printSummary = (item: Reportable): void => {
   console.log(item.summary());
 };
 
-printVehicle(oldCivic);
-console.log(drink.summary());
+printSummary(oldCivic);
+printSummary(drink);
