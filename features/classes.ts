@@ -18,3 +18,15 @@ class Car extends Vehicle {
 const car = new Car();
 car.drive();
 car.honk();
+
+// Public
+// This method can be called any where, any time
+
+// Private
+// This method can only be called
+// By other methods in this class
+
+// Protected
+// This method can be called
+// By other methods in this class
+// OR by other methods in child classes
