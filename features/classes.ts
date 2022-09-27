@@ -1,8 +1,9 @@
 class Vehicle {
-  drive(): void {
-    console.log("chugga chugga");
-  }
-  honk(): void {
+  // Protected
+  // This method can be called
+  // By other methods in this class
+  // OR by other methods in child classes
+  protected honk(): void {
     console.log("beep");
   }
 }
@@ -10,23 +11,19 @@ class Vehicle {
 // This class inherits all properties
 // of 'Vehicle' class
 class Car extends Vehicle {
-  drive(): void {
+  // Private
+  // This method can only be called
+  // By other methods in this class
+  private drive(): void {
     console.log("vroom vroom");
+    this.honk();
+  }
+  // Public
+  // This method can be called any where, any time
+  public startDrivingProcess(): void {
+    this.drive();
   }
 }
 
 const car = new Car();
-car.drive();
-car.honk();
-
-// Public
-// This method can be called any where, any time
-
-// Private
-// This method can only be called
-// By other methods in this class
-
-// Protected
-// This method can be called
-// By other methods in this class
-// OR by other methods in child classes
+car.startDrivingProcess();
