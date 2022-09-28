@@ -45,13 +45,22 @@ export class CustomMap {
 
   // ------ OPTIMAL CODE ------
   addMarker(mappable: Mappable): void {
-    new google.maps.Marker({
+    const marker = new google.maps.Marker({
       // defining map to mark on
       map: this.googleMap,
       position: {
         lat: mappable.location.lat,
         lng: mappable.location.lng,
       },
+    });
+
+    // creates an event listener and listens click events
+    // and showing our content onto the map
+    marker.addListener("click", function () {
+      const infowindow = new google.maps.InfoWindow({
+        content: "hi there!!",
+      });
+      infowindow.open(this.googleMap, marker);
     });
   }
 }
