@@ -5,6 +5,7 @@ interface Mappable {
     lat: number;
     lng: number;
   };
+  markerContent(): string;
 }
 
 export class CustomMap {
@@ -58,7 +59,7 @@ export class CustomMap {
     // and showing our content onto the map
     marker.addListener("click", function () {
       const infowindow = new google.maps.InfoWindow({
-        content: "hi there!!",
+        content: `hi there!! ${mappable.markerContent()}`,
       });
       infowindow.open(this.googleMap, marker);
     });
