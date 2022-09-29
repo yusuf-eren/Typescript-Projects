@@ -1,14 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LinkedList = void 0;
+const Sorter_1 = require("./Sorter");
 class Node {
     constructor(data) {
         this.data = data;
         this.next = null;
     }
 }
-class LinkedList {
+class LinkedList extends Sorter_1.Sorter {
     constructor() {
+        super(...arguments);
         this.head = null;
     }
     add(data) {
@@ -37,7 +39,7 @@ class LinkedList {
     }
     at(index) {
         if (!this.head) {
-            throw new Error('Index out of bounds');
+            throw new Error("Index out of bounds");
         }
         let counter = 0;
         let node = this.head;
@@ -48,11 +50,11 @@ class LinkedList {
             counter++;
             node = node.next;
         }
-        throw new Error('Index out of bounds');
+        throw new Error("Index out of bounds");
     }
     compare(leftIndex, rightIndex) {
         if (!this.head) {
-            throw new Error('List is empty');
+            throw new Error("List is empty");
         }
         return this.at(leftIndex).data > this.at(rightIndex).data;
     }
