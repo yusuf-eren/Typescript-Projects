@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.dateStringToDate = void 0;
-const dateStringToDate = (dateString) => {
-    const dateFormatted = dateString.split("/").map((value) => {
+var dateStringToDate = function (dateString) {
+    var dateParts = dateString.split('/').map(function (value) {
         return parseInt(value);
     });
-    return new Date(dateFormatted[2], dateFormatted[1] - 1, dateFormatted[0] + 1);
+    return new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
 };
 exports.dateStringToDate = dateStringToDate;
